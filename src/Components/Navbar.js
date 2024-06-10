@@ -15,6 +15,9 @@ const Navbar = () => {
             <h1>
              api_url :{process.env.REACT_APP_API_KEY}
             </h1>
+            <h1>
+             test
+            </h1>
 
             
             
