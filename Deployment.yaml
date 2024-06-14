@@ -125,40 +125,6 @@ metadata:
       fieldsV1:
         'f:immutable': {}
 immutable: false
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: crypto-configmap
-  namespace: omarajraoui5-dev
-  uid: 2fccc50b-7822-4d15-8e35-6f7219c0d20e
-  resourceVersion: '1967133257'
-  creationTimestamp: '2024-06-10T12:16:25Z'
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: v1
-      time: '2024-06-10T14:48:57Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:immutable': {}
-immutable: false
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: crypto-configmap
-  namespace: omarajraoui5-dev
-  uid: 2fccc50b-7822-4d15-8e35-6f7219c0d20e
-  resourceVersion: '1967133257'
-  creationTimestamp: '2024-06-10T12:16:25Z'
-  managedFields:
-    - manager: Mozilla
-      operation: Update
-      apiVersion: v1
-      time: '2024-06-10T14:48:57Z'
-      fieldsType: FieldsV1
-      fieldsV1:
-        'f:immutable': {}
-immutable: false
 data:
  appConfig.js: |
  var appConfig = {

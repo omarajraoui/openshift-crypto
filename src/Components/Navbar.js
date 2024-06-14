@@ -10,13 +10,16 @@ const Navbar = () => {
             <FaCoins className='icon'/>
             <h1>Coin <span className='purple'>Search</span></h1>
             <h1>
-             api_url :{process.env.REACT_APP_API_URL}
+            analytics_url :{process.env.REACT_APP_ANALYTICS_URL}
             </h1>
             <h1>
-             api_url :{process.env.REACT_APP_API_KEY}
+             oth_redirect_url :{process.env.REACT_APP_OAUTH_REDIRECT_URI}
             </h1>
             <h1>
-             test
+             oth_client_id :{process.env.REACT_APP_OAUTH_CLIENT_ID}
+            </h1>
+            <h1>
+             Testing new values 
             </h1>
 
             

@@ -4,6 +4,9 @@ import Coins from './Components/Coins';
 import Coin from './routes/Coin';
 import Navbar from './Components/Navbar';
 import {Routes,Route} from 'react-router-dom'
+import { REACT_APP_OAUTH_CLIENT_ID, REACT_APP_OAUTH_REDIRECT_URI, REACT_APP_ANALYTICS_URL } from '../appConfig.js';
+
+
 function App() {
   const [coins,setCoins] = useState([]);
 
@@ -18,8 +21,11 @@ function App() {
       console.log(err);
     })
   },[])
-
-
+  
+  const App = () => {
+    console.log('OAuth Client ID:', REACT_APP_OAUTH_CLIENT_ID);
+    console.log('OAuth Redirect URI:', REACT_APP_OAUTH_REDIRECT_URI);
+    console.log('Analytics URL:', REACT_APP_ANALYTICS_URL);
 
 
   return (
