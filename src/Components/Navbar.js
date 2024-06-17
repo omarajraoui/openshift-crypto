@@ -2,6 +2,7 @@ import React from 'react'
 import {FaCoins} from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 import './Navbar.css'
+import { REACT_LIVE_SCROLLING_SPEED ,  REACT_START_HOUR } from '../config.ts'; /* IMPORT */
 
 const Navbar = () => {
   return (
@@ -10,17 +11,12 @@ const Navbar = () => {
             <FaCoins className='icon'/>
             <h1>Coin <span className='purple'>Search</span></h1>
             <h1>
-            analytics_url :{window.env.REACT_APP_ANALYTICS_URL}
+            live scrolling speed :{REACT_LIVE_SCROLLING_SPEED}
             </h1>
             <h1>
-             oth_redirect_url :{window.env.REACT_APP_OAUTH_REDIRECT_URI}
+            start hour :{ REACT_START_HOUR}
             </h1>
-            <h1>
-             oth_client_id :{window.env.REACT_APP_OAUTH_CLIENT_ID}
-            </h1>
-            <h1>
-             Testing new values 
-            </h1>
+          
 
             
             
