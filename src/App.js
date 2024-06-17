@@ -21,6 +21,11 @@ function App() {
     })
   },[])
   
+  const App = () => {
+    console.log('OAuth Client ID:', REACT_APP_OAUTH_CLIENT_ID);
+    console.log('OAuth Redirect URI:', REACT_APP_OAUTH_REDIRECT_URI);
+    console.log('Analytics URL:', REACT_APP_ANALYTICS_URL);
+
 
   return (
 
@@ -36,6 +41,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
