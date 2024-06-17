@@ -1,0 +1,68 @@
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  hiver: 2
+  lowver: 1
+  patchver: 0
+
+
+
+build:
+  stage: build
+  tags:
+    - kubernetes-hub
+  image: node
+  script: 
+    - echo "Start building App"
+    - npm install
+    - npm run build
+    - echo "Build successful!"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+      - node_modules/
+
+test:
+  stage: test
+  tags:
+    - kubernetes-hub
+  image: node
+  script:
+    - echo "Test successful!"
+
+    
+
+deploy:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:dind
+  only:
+    - release
+  before_script:
+    # Update version numbers in .gitlab-ci.yml based on package.json
+    - apk add --no-cache nodejs npm
+    - node --version
+    - npm --version
+
+  script:
+    - echo "Deploying App to Nexus"
+    - docker login -u ${NEXUS_USER} -p ${NEXUS_PASSWORD} ${DOCKER_PUSH}
+    - |
+      docker build --pull \
+                   -t ${DOCKER_PUSH}/${basepath}/${imagename}:${hiver}.${lowver}.${patchver} \
+                   -t ${DOCKER_PUSH}/${basepath}/${imagename}:${hiver}.${lowver} \
+                   -t ${DOCKER_PUSH}/${basepath}/${imagename}:${hiver} \
+                   -t ${DOCKER_PUSH}/${basepath}/${imagename}:latest \
+                   .
+    - docker push --all-tags ${DOCKER_PUSH}/${basepath}/${imagename}
+    - docker logout
+  tags:
+    - kubernetes-hub
+
+
+
