@@ -14,7 +14,12 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^4.28.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.0"
   },
   "scripts": {
     "start": " react-dotenv && react-scripts start",
@@ -32,7 +37,7 @@
     "node_modules",
     "build/*"
   ],
-  
+
   "browserslist": {
     "production": [
       ">0.2%",
