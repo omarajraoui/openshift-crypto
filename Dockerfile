@@ -1,5 +1,6 @@
 ARG BUILD_IMAGE=node:14.15-stretch-slim 
-ARG RUNTIME_IMAGE=apache:2.4-alpine
+ARG RUNTIME_IMAGE=httpd:2.4.54-alpine
+
 
 FROM ${BUILD_IMAGE} as builder
 WORKDIR /output
