@@ -1,9 +1,9 @@
-const REACT_START_HOUR: string = window.REACT_START_HOUR || '';
-const REACT_NUMBER_OF_HOURS: string = window.REACT_ADDITIONAL_NEXT_DAY_HOURS || '';
-const REACT_API_DOMAIN: string = window.REACT_API_DOMAIN || '';
-const REACT_VAM_INTERVAL: string = window.REACT_VAM_INTERVAL || '';
-const REACT_CAM_INTERVAL: string = window.REACT_CAM_INTERVAL || '';
-const REACT_LIVE_SCROLLING_SPEED: string = window.REACT_LIVE_SCROLLING_SPEED || '';
+const REACT_START_HOUR: string = window.REACT_START_HOUR || '6';
+const REACT_NUMBER_OF_HOURS: string = window.REACT_ADDITIONAL_NEXT_DAY_HOURS || '18';
+const REACT_API_DOMAIN: string = window.REACT_API_DOMAIN || 'link.com';
+const REACT_VAM_INTERVAL: string = window.REACT_VAM_INTERVAL || '10000';
+const REACT_CAM_INTERVAL: string = window.REACT_CAM_INTERVAL || '10000';
+const REACT_LIVE_SCROLLING_SPEED: string = window.REACT_LIVE_SCROLLING_SPEED || '2';
 
 export {
   REACT_START_HOUR,
@@ -13,3 +13,5 @@ export {
   REACT_CAM_INTERVAL,
   REACT_LIVE_SCROLLING_SPEED,
 };
+
+

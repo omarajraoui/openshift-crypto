@@ -16,11 +16,6 @@ const Navbar = () => {
             <h1>
             start hour :{ REACT_START_HOUR}
             </h1>
-          
-
-            
-            
-
         </div>
     </Link>
   )

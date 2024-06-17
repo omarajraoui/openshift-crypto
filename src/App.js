@@ -4,7 +4,6 @@ import Coins from './Components/Coins';
 import Coin from './routes/Coin';
 import Navbar from './Components/Navbar';
 import {Routes,Route} from 'react-router-dom';
-import { REACT_API_DOMAIN } from './config.ts'; /* IMPORT */
 
 
 function App() {
@@ -20,8 +19,6 @@ function App() {
       console.log(err);
     })
   },[])
-  
-  console.log(REACT_API_DOMAIN);
 
   return (
 
